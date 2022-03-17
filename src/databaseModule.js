@@ -8,28 +8,28 @@ export const databaseModule = (sendRequest) => {
     return sendRequest(`/collections/${id}`, 'GET');
   };
 
-  const createCollection = (collection, data) => {
-    return sendRequest(`/${collection}`, 'POST', data);
+  const createCollection = (collectionName) => {
+    return sendRequest(`/collections`, 'POST', { collectionName });
   };
 
-  const deleteCollection = (collection) => {
-    return sendRequest(`/${collection}`, 'DELETE');
+  const deleteCollection = (id) => {
+    return sendRequest(`/collections/${id}`, 'DELETE');
   };
 
   const getItem = (collection, id) => {
-    return sendRequest(`/${collection}/${id}`, 'GET');
+    return sendRequest(`/collections/${collection}/${id}`, 'GET');
   };
 
   const createItem = (collection, data) => {
-    return sendRequest(`/${collection}`, 'POST', data);
+    return sendRequest(`/collections/${collection}`, 'POST', data);
   };
 
   const updateItem = (collection, id, data) => {
-    return sendRequest(`/${collection}/${id}`, 'PUT', data);
+    return sendRequest(`/collections/${collection}/${id}`, 'PUT', data);
   };
 
   const deleteItem = (collection, id) => {
-    return sendRequest(`/${collection}/${id}`, 'DELETE');
+    return sendRequest(`/collections/${collection}/${id}`, 'DELETE');
   };
 
   return {
