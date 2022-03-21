@@ -1,6 +1,7 @@
 import axios from 'axios';
 import authModule from './authenticationModule';
 import databaseModule from './databaseModule';
+import cloudCodeModule from './cloudCodeModule';
 
 const initialize = (hostUrl, apiKey) => {
   // generic authorized sendRequest function that other modules can use
@@ -20,11 +21,13 @@ const initialize = (hostUrl, apiKey) => {
 
   const auth = authModule(sendRequest);
   const db = databaseModule(sendRequest);
+  const ccf = cloudCodeModule(sendRequest);
 
   // return object with all of the modules
   return {
     auth,
-    db
+    db,
+    ccf
   };
 };
 
