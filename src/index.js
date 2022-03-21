@@ -1,21 +1,21 @@
 import axios from 'axios';
-import authModule from './authModule';
+import authModule from './authenticationModule';
 import databaseModule from './databaseModule';
 
 const initialize = (hostUrl, apiKey) => {
   // generic authorized sendRequest function that other modules can use
   // - all requests will use the apiKey provided in the initialize function
-  const sendRequest = async (path, method, body) => {
+  const sendRequest = async (path, method, data) => {
     return axios({
       method,
-      body,
+      data,
       url: `${hostUrl}${path}`,
       headers: {
         'Authorization': `Basic ${apiKey}`,
         'Content-Type': 'application/json'
       }
     })
-    .then(res => res.json());
+    .then(result => result);
   }
 
   const auth = authModule(sendRequest);
