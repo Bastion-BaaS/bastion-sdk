@@ -7,7 +7,8 @@ Client SDK for interacting with your Bastion application.
 
 # Getting Started
 - To install: `npm install bastion-sdk` within your project directory.
-- Then, to use within your project, import the package with `import initialize from 'bastion-sdk'` and initialize the SDK with `const sdk = initialize("yourURL", "yourApiKey")`
+- Import the package in your JavaScript file: `import initialize from 'bastion-sdk'`
+- Initialize the SDK: `const sdk = initialize("yourURL", "yourApiKey")`
     - You can get the URL and API key for your application instance in your Bastion admin app.
 - You are now ready to use the SDK methods below in your JavaScript code.
 
