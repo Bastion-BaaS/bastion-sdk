@@ -1,4 +1,3 @@
-// return object with all the methods
 const databaseModule = (sendRequest) => {
   const getCollections = () => {
     return sendRequest('/collections', 'GET');
@@ -24,8 +23,12 @@ const databaseModule = (sendRequest) => {
     return sendRequest(`/collections/${name}`, 'POST', data);
   };
 
-  const updateItem = (name, id, data) => {
+  const overwriteItem = (name, id, data) => {
     return sendRequest(`/collections/${name}/${id}`, 'PUT', data);
+  };
+
+  const updateItem = (name, id, data) => {
+    return apiClient.sendRequest(`/${name}/${id}`, 'PATCH', data);
   };
 
   const deleteItem = (name, id) => {
@@ -39,9 +42,10 @@ const databaseModule = (sendRequest) => {
     deleteCollection,
     getItem,
     createItem,
+    overwriteItem,
     updateItem,
     deleteItem,
   };
 };
 
-export default databaseModule
+export default databaseModule;
