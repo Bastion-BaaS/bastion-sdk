@@ -16,7 +16,8 @@ const initialize = (hostUrl, apiKey) => {
         'Content-Type': 'application/json'
       }
     })
-    .then(result => result);
+    .then(result => result)
+    .catch(err => console.log(err));
   }
 
   const auth = authModule(sendRequest);
