@@ -1,6 +1,9 @@
 const cloudCodeModule = (sendRequest) => {
-  const run = (ccfName) => {
-    return sendRequest(`/ccf/${ccfName}/run`, 'POST');
+  const basePath = '/server/development/ccf';
+
+  // parameters optional
+  const run = (ccfName, parameters=[]) => {
+    return sendRequest(`${basePath}/${ccfName}/run`, 'POST', parameters);
   };
 
   return {
