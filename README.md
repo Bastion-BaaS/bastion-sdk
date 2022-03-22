@@ -47,44 +47,15 @@ Outputs:
 
 ## Database:
 
-### `sdk.db.getCollections()`
-Get a list of all collections in your application.
+### `sdk.db.getAllItems(collectionName)`
+Get all items in a collection with the given collection name.
 
 Inputs:
-- None
+- collectionName: String
 
 Outputs:
-- Array of collection objects
+- The items in a collection specified as a JSON object
 - Status 200
-
-### `sdk.db.getCollection(collectionName)`
-Get a single collection with the given collection name.
-
-Inputs:
-- collectionName: String
-
-Outputs:
-- The collection specified as a JSON object
-- Status 200
-
-### `sdk.db.createCollection(collectionName)`
-Create a new collection with the given collection name.
-
-Inputs:
-- collectionName: String
-
-Outputs:
-- The newly created collection as a JSON object
-- Status 201
-
-### `sdk.db.deleteCollection(collectionName)`
-Delete a collection with the given collection name.
-
-Inputs:
-- collectionName: String
-
-Outputs:
-- Status 204
 
 ### `sdk.db.getItem(collectionName, itemId)`
 Get a single database record with the given collection name and ID.

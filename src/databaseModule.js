@@ -1,45 +1,32 @@
 const databaseModule = (sendRequest) => {
-  const getCollections = () => {
-    return sendRequest('/collections', 'GET');
-  };
+  const basePath = '/server/development/data';
 
-  const getCollection = (name) => {
-    return sendRequest(`/data/${name}`, 'GET');
-  };
-
-  const createCollection = (name) => {
-    return sendRequest(`/data`, 'POST', { name })
-  };
-
-  const deleteCollection = (name) => {
-    return sendRequest(`/data/${name}`, 'DELETE');
+  const getAllItems = (name) => {
+    return sendRequest(`${basePath}/${name}`, 'GET');
   };
 
   const getItem = (name, id) => {
-    return sendRequest(`/data/${name}/${id}`, 'GET');
+    return sendRequest(`${basePath}/${name}/${id}`, 'GET');
   };
 
   const createItem = (name, data) => {
-    return sendRequest(`/data/${name}`, 'POST', data);
+    return sendRequest(`${basePath}/${name}`, 'POST', data);
   };
 
   const overwriteItem = (name, id, data) => {
-    return sendRequest(`/data/${name}/${id}`, 'PUT', data);
+    return sendRequest(`${basePath}/${name}/${id}`, 'PATCH', data);
   };
 
   const updateItem = (name, id, data) => {
-    return sendRequest(`/data/${name}/${id}`, 'PATCH', data);
+    return sendRequest(`${basePath}/${name}/${id}`, 'PUT', data);
   };
 
   const deleteItem = (name, id) => {
-    return sendRequest(`/data/${name}/${id}`, 'DELETE');
+    return sendRequest(`${basePath}/${name}/${id}`, 'DELETE');
   };
 
   return {
-    getCollections,
-    getCollection,
-    createCollection,
-    deleteCollection,
+    getAllItems,
     getItem,
     createItem,
     overwriteItem,

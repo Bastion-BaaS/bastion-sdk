@@ -1,11 +1,11 @@
 {
   "name": "bastion-sdk",
-  "version": "1.0.0",
+  "version": "0.0.2",
   "description": "SDK for interacting with your Bastion application",
   "author": "bastion-sdk",
   "contributors": [
     {
-      "name": "Reilly Knutson @Reillyknut"
+      "name": "Reilly Knutson @reillyknut"
     }
   ],
   "main": "index.js",
