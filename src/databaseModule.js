@@ -28,7 +28,7 @@ const databaseModule = (sendRequest) => {
   };
 
   const updateItem = (name, id, data) => {
-    return apiClient.sendRequest(`/data/${name}/${id}`, 'PATCH', data);
+    return sendRequest(`/data/${name}/${id}`, 'PATCH', data);
   };
 
   const deleteItem = (name, id) => {
