@@ -3,36 +3,36 @@ const databaseModule = (sendRequest) => {
     return sendRequest('/collections', 'GET');
   };
 
-  const getCollection = (id) => {
-    return sendRequest(`/collections/${id}`, 'GET');
+  const getCollection = (name) => {
+    return sendRequest(`/data/${name}`, 'GET');
   };
 
   const createCollection = (name) => {
-    return sendRequest(`/collections`, 'POST', { name })
+    return sendRequest(`/data`, 'POST', { name })
   };
 
-  const deleteCollection = (id) => {
-    return sendRequest(`/collections/${id}`, 'DELETE');
+  const deleteCollection = (name) => {
+    return sendRequest(`/data/${name}`, 'DELETE');
   };
 
   const getItem = (name, id) => {
-    return sendRequest(`/collections/${name}/${id}`, 'GET');
+    return sendRequest(`/data/${name}/${id}`, 'GET');
   };
 
   const createItem = (name, data) => {
-    return sendRequest(`/collections/${name}`, 'POST', data);
+    return sendRequest(`/data/${name}`, 'POST', data);
   };
 
   const overwriteItem = (name, id, data) => {
-    return sendRequest(`/collections/${name}/${id}`, 'PUT', data);
+    return sendRequest(`/data/${name}/${id}`, 'PUT', data);
   };
 
   const updateItem = (name, id, data) => {
-    return apiClient.sendRequest(`/${name}/${id}`, 'PATCH', data);
+    return sendRequest(`/data/${name}/${id}`, 'PATCH', data);
   };
 
   const deleteItem = (name, id) => {
-    return sendRequest(`/collections/${name}/${id}`, 'DELETE');
+    return sendRequest(`/data/${name}/${id}`, 'DELETE');
   };
 
   return {

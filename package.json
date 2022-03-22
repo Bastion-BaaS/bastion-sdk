@@ -1,5 +1,5 @@
 {
-  "name": "bastion-sdk-test",
+  "name": "bastion-sdk",
   "version": "1.0.0",
   "description": "SDK for interacting with your Bastion application",
   "author": "bastion-sdk",
