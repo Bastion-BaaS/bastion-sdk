@@ -1,6 +1,10 @@
 {
   "name": "bastion-sdk",
+<<<<<<< Updated upstream
   "version": "1.0.0",
+=======
+  "version": "0.0.6",
+>>>>>>> Stashed changes
   "description": "SDK for interacting with your Bastion application",
   "author": "bastion-sdk",
   "contributors": [
@@ -8,7 +12,7 @@
       "name": "Reilly Knutson @Reillyknut"
     }
   ],
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
