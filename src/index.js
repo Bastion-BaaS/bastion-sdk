@@ -13,7 +13,8 @@ const initialize = (hostUrl, apiKey) => {
       url: `${hostUrl}${path}`,
       headers: {
         'Authorization': `Basic ${apiKey}`,
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
+        'X-Requested-By': 'client-sdk'
       }
     })
     .then(result => result)

@@ -9,16 +9,16 @@ const databaseModule = (sendRequest) => {
     return sendRequest(`${basePath}/${name}/${id}`, 'GET');
   };
 
-  const createItem = (name, data) => {
-    return sendRequest(`${basePath}/${name}`, 'POST', data);
+  const createItem = (name, record) => {
+    return sendRequest(`${basePath}/${name}`, 'POST', record);
   };
 
-  const overwriteItem = (name, id, data) => {
-    return sendRequest(`${basePath}/${name}/${id}`, 'PATCH', data);
+  const overwriteItem = (name, id, record) => {
+    return sendRequest(`${basePath}/${name}/${id}`, 'PATCH', record);
   };
 
-  const updateItem = (name, id, data) => {
-    return sendRequest(`${basePath}/${name}/${id}`, 'PUT', data);
+  const updateItem = (name, id, record) => {
+    return sendRequest(`${basePath}/${name}/${id}`, 'PUT', record);
   };
 
   const deleteItem = (name, id) => {
