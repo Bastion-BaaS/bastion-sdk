@@ -19,7 +19,6 @@ const initialize = (hostUrl, apiKey) => {
     };
 
     if (data instanceof FormData) { // if data is a file upload
-      config.headers['Content-Type'] = 'multipart/form-data';
       config.data = data;
     } else {
       config.headers['Content-Type'] = 'application/json';
