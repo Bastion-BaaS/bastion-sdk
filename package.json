@@ -1,6 +1,6 @@
 {
   "name": "bastion-sdk",
-  "version": "0.0.6",
+  "version": "0.0.26",
   "description": "SDK for interacting with your Bastion application",
   "author": "bastion-sdk",
   "contributors": [
