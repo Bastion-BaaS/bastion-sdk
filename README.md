@@ -16,31 +16,32 @@ Client SDK for interacting with your Bastion application.
 
 ## Authentication:
 
-### `sdk.auth.register(email, password)`
-Register a new user and password. Passwords are stored as encrypted values.
+### `sdk.auth.register(username, email, password)`
+Register a new user, email, and password. Passwords are stored as encrypted values.
 
 Inputs:
+- username: String
 - email: String
 - password: String
 
 Outputs:
 - Status 200
 
-### `sdk.auth.login(email, password)`
-Log in a user with the given email and password.
+### `sdk.auth.login(username, password)`
+Log in a user with the given username and password.
 
 Inputs:
-- email: String
+- username: String
 - password: String
 
 Outputs:
 - Status 200
 
-### `sdk.auth.logout(email)`
-Logout a given user and invalidate their session.
+### `sdk.auth.logout()`
+Logout current user and invalidate their session.
 
 Inputs:
-- email: String
+- None
 
 Outputs:
 - Status 200
