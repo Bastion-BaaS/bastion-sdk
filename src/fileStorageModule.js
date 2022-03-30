@@ -9,9 +9,10 @@ const fileStorageModule = (sendRequest) => {
     return sendRequest(`${basePath}/${id}`, 'GET');
   };
 
-  const uploadFile = (data) => {
+  const uploadFile = (data, name) => {
     const formData = new FormData();
     formData.append('file', data);
+    formData.append('fileName', name);
 
     return sendRequest(`${basePath}`, 'POST', formData);
   };

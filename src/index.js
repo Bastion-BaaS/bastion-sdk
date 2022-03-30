@@ -18,11 +18,8 @@ const initialize = (hostUrl, apiKey) => {
       }
     };
 
-    if (data instanceof FormData) { // if data is a file upload
-      config.data = data;
-    } else {
+    if (!(data instanceof FormData)) { // if data is not a file upload
       config.headers['Content-Type'] = 'application/json';
-      config.data = JSON.stringify(data);
     }
 
     return axios(config)
