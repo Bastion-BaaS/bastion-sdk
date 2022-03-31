@@ -3,6 +3,11 @@
 </p>
 
 # Bastion SDK
+
+![shields.io npm version badge](https://img.shields.io/npm/v/bastion-sdk)
+![shields.io npm license badge](https://img.shields.io/npm/l/bastion-sdk)
+![shields.io custom website link badge](https://img.shields.io/static/v1?label=website&message=bastion.github.io&color=blue)
+
 Client SDK for interacting with your Bastion application.
 
 # Getting Started
