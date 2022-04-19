@@ -8,13 +8,14 @@
 ![shields.io npm license badge](https://img.shields.io/npm/l/bastion-sdk)
 ![shields.io custom website link badge](https://img.shields.io/static/v1?label=website&message=bastion.github.io&color=blue)
 
-Client SDK for interacting with your Bastion application.
+Client SDK for interacting with your Bastion application. If you would like to know more, you can read our Bastion case study <a href="https://bastion-baas.github.io/case-study">here</a>.
 
 # Getting Started
 - To install: `npm install bastion-sdk` within your project directory.
 - Import the package in your JavaScript file: `import initialize from 'bastion-sdk'`
 - Initialize the SDK: `const sdk = initialize("yourURL", "yourApiKey")`
     - You can get the URL and API key for your application instance in your Bastion admin app.
+    - To deploy your admin app, you can view our instructions for the <a href="https://github.com/Bastion-BaaS/bastion-cli">Bastion cli</a>.
 - You are now ready to use the SDK methods below in your JavaScript code.
 
 # SDK Methods
