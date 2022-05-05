@@ -15,7 +15,7 @@ Client SDK for interacting with your Bastion application. If you would like to k
 - Import the package in your JavaScript file: `import initialize from 'bastion-sdk'`
 - Initialize the SDK: `const sdk = initialize("yourURL", "yourApiKey")`
     - You can get the URL and API key for your application instance in your Bastion admin app.
-    - To deploy your admin app, you can view our instructions for the <a href="https://github.com/Bastion-BaaS/bastion-cli">Bastion cli</a>.
+    - To deploy your admin app, you can view instructions for the <a href="https://github.com/Bastion-BaaS/bastion-cli">Bastion cli</a>.
 - You are now ready to use the SDK methods below in your JavaScript code.
 
 # SDK Methods
